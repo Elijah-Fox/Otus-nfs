@@ -1,0 +1,413 @@
+Script started on 2020-11-27 18:35:57+03:00
+]777;notify;Command completed;cls]0;ilya@linuxos000:~/Otus-nfs]7;file://linuxos000.corp.pri/home/ilya/Otus-nfs[ilya@linuxos000 Otus-nfs]$ vagrsnt [K[K[K[Kant nfs-server
+[0mUsage: vagrant [options] <command> [<args>]
+
+    -h, --help                       Print this help.
+
+Common commands:
+     autocomplete    manages autocomplete installation on host
+     box             manages boxes: installation, removal, etc.
+     cloud           manages everything related to Vagrant Cloud
+     destroy         stops and deletes all traces of the vagrant machine
+     global-status   outputs status Vagrant environments for this user
+     halt            stops the vagrant machine
+     help            shows the help for a subcommand
+     init            initializes a new Vagrant environment by creating a Vagrantfile
+     login           
+     package         packages a running vagrant environment into a box
+     plugin          manages plugins: install, uninstall, update, etc.
+     port            displays information about guest port mappings
+     powershell      connects to machine via powershell remoting
+     provision       provisions the vagrant machine
+     push            deploys code in this environment to a configured destination
+     rdp             connects to machine via RDP
+     reload          restarts vagrant machine, loads new Vagrantfile configuration
+     resume          resume a suspended vagrant machine
+     snapshot        manages snapshots: saving, restoring, etc.
+     ssh             connects to machine via SSH
+     ssh-config      outputs OpenSSH valid configuration to connect to the machine
+     status          outputs status of the vagrant machine
+     suspend         suspends the machine
+     up              starts and provisions the vagrant environment
+     upload          upload to machine via communicator
+     validate        validates the Vagrantfile
+     version         prints current and latest Vagrant version
+     winrm           executes commands on a machine via WinRM
+     winrm-config    outputs WinRM configuration to connect to the machine
+
+For help on any individual command run `vagrant COMMAND -h`
+
+Additional subcommands are available, but are either more advanced
+or not commonly used. To see all subcommands, run the command
+`vagrant list-commands`.
+        --[no-]color                 Enable or disable color output
+        --machine-readable           Enable machine readable output
+    -v, --version                    Display Vagrant version
+        --debug                      Enable debug output
+        --timestamp                  Enable timestamps on log output
+        --debug-timestamp            Enable debug output with timestamps
+        --no-tty                     Enable non-interactive output
+[0m
+]777;notify;Command completed;vagrant nfs-server]0;ilya@linuxos000:~/Otus-nfs]7;file://linuxos000.corp.pri/home/ilya/Otus-nfs[ilya@linuxos000 Otus-nfs]$ vagrant nfs-serversnfs-serversnfs-serverhnfs-server nfs-server
+Last login: Fri Nov 27 15:17:40 2020 from 10.0.2.2
+]0;vagrant@nfs-server:~[?1034h[vagrant@nfs-server ~]$ ping 192.168.10.11
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.826 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.518 ms
+^C
+--- 192.168.10.11 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.518/0.672/0.826/0.154 ms
+]0;vagrant@nfs-server:~[vagrant@nfs-server ~]$ si u
+Password: 
+]0;vagrant@nfs-server:/home/vagrant[?1034h[root@nfs-server vagrant]# at /boot/config-$(uname -r) | grep NFS[1@c
+CONFIG_XE[01;31m[KNFS[m[K=m
+CONFIG_XEN_COMPAT_XE[01;31m[KNFS[m[K=y
+CONFIG_KER[01;31m[KNFS[m[K=y
+CONFIG_[01;31m[KNFS[m[K_FS=m
+# CONFIG_[01;31m[KNFS[m[K_V2 is not set
+CONFIG_[01;31m[KNFS[m[K_V3=m
+CONFIG_[01;31m[KNFS[m[K_V3_ACL=y
+CONFIG_[01;31m[KNFS[m[K_V4=m
+# CONFIG_[01;31m[KNFS[m[K_SWAP is not set
+CONFIG_[01;31m[KNFS[m[K_V4_1=y
+CONFIG_[01;31m[KNFS[m[K_V4_2=y
+CONFIG_P[01;31m[KNFS[m[K_FILE_LAYOUT=m
+CONFIG_P[01;31m[KNFS[m[K_BLOCK=m
+CONFIG_P[01;31m[KNFS[m[K_OBJLAYOUT=m
+CONFIG_P[01;31m[KNFS[m[K_FLEXFILE_LAYOUT=m
+CONFIG_[01;31m[KNFS[m[K_V4_1_IMPLEMENTATION_ID_DOMAIN="kernel.org"
+# CONFIG_[01;31m[KNFS[m[K_V4_1_MIGRATION is not set
+CONFIG_[01;31m[KNFS[m[K_V4_SECURITY_LABEL=y
+CONFIG_[01;31m[KNFS[m[K_FSCACHE=y
+# CONFIG_[01;31m[KNFS[m[K_USE_LEGACY_DNS is not set
+CONFIG_[01;31m[KNFS[m[K_USE_KERNEL_DNS=y
+CONFIG_[01;31m[KNFS[m[K_DEBUG=y
+CONFIG_[01;31m[KNFS[m[KD=m
+CONFIG_[01;31m[KNFS[m[KD_V2_ACL=y
+CONFIG_[01;31m[KNFS[m[KD_V3=y
+CONFIG_[01;31m[KNFS[m[KD_V3_ACL=y
+CONFIG_[01;31m[KNFS[m[KD_V4=y
+CONFIG_[01;31m[KNFS[m[KD_P[01;31m[KNFS[m[K=y
+# CONFIG_[01;31m[KNFS[m[KD_BLOCKLAYOUT is not set
+CONFIG_[01;31m[KNFS[m[KD_SCSILAYOUT=y
+CONFIG_[01;31m[KNFS[m[KD_V4_SECURITY_LABEL=y
+# CONFIG_[01;31m[KNFS[m[KD_FAULT_INJECTION is not set
+CONFIG_[01;31m[KNFS[m[K_ACL_SUPPORT=m
+CONFIG_[01;31m[KNFS[m[K_COMMON=y
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# yum info nfs-utils
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.corbina.net
+ * extras: mirror.corbina.net
+ * updates: centos-mirror.rbc.ru
+Installed Packages
+Name        : [1mnfs-utils(B[m
+Arch        : x86_64
+Epoch       : 1
+Version     : 1.3.0
+Release     : 0.66.el7
+Size        : 1.1 M
+Repo        : installed
+From repo   : anaconda
+Summary     : NFS utilities and supporting clients and daemons for the kernel NFS server
+URL         : http://sourceforge.net/projects/nfs
+License     : MIT and GPLv2 and GPLv2+ and BSD
+Description : The nfs-utils package provides a daemon for the kernel NFS server and
+            : related tools, which provides a much higher level of performance than the
+            : traditional Linux NFS server used by most users.
+            : 
+            : This package also contains the showmount program.  Showmount queries the
+            : mount daemon on a remote host for information about the NFS (Network File
+            : System) server on the remote host.  For example, showmount can display the
+            : clients which are mounted on that host.
+            : 
+            : This package also contains the mount.nfs and umount.nfs program.
+
+Available Packages
+Name        : [1m[34mnfs-utils(B[m
+Arch        : x86_64
+Epoch       : 1
+Version     : 1.3.0
+Release     : 0.68.el7
+Size        : 412 k
+Repo        : base/7/x86_64
+Summary     : NFS utilities and supporting clients and daemons for the kernel NFS server
+URL         : http://sourceforge.net/projects/nfs
+License     : MIT and GPLv2 and GPLv2+ and BSD
+Description : The nfs-utils package provides a daemon for the kernel NFS server and
+            : related tools, which provides a much higher level of performance than the
+            : traditional Linux NFS server used by most users.
+            : 
+            : This package also contains the showmount program.  Showmount queries the
+            : mount daemon on a remote host for information about the NFS (Network File
+            : System) server on the remote host.  For example, showmount can display the
+            : clients which are mounted on that host.
+            : 
+            : This package also contains the mount.nfs and umount.nfs program.
+
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# sudo yum install -y nfs-utils nano
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.corbina.net
+ * extras: mirror.corbina.net
+ * updates: centos-mirror.rbc.ru
+Package nano-2.3.1-10.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.66.el7 will be updated
+---> Package nfs-utils.x86_64 1:1.3.0-0.68.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==============================================================================================================================================================================================
+ Package                                       Arch                                       Version                                              Repository                                Size
+==============================================================================================================================================================================================
+Updating:
+ nfs-utils                                     x86_64                                     1:1.3.0-0.68.el7                                     base                                     412 k
+
+Transaction Summary
+==============================================================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 412 k
+Downloading packages:
+No Presto metadata available for base
+nfs-utils-1.3.0-0.68.el7.x86_64.rpm                                                                                                                                    | 412 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [                                                                                                                                      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########                                                                                                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##############                                                                                                                        ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [######################                                                                                                                ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##########################                                                                                                            ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################                                                                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#####################################                                                                                                 ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [######################################                                                                                                ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################                                                                                          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##################################################                                                                                    ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#####################################################                                                                                 ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#########################################################                                                                             ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##############################################################                                                                        ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################                                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [####################################################################                                                                  ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################                                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################                                                       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################################                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [################################################################################################                                      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#######################################################################################################                               ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################################################################################                          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################################################                       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################################################                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################################################################              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#########################################################################################################################             ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###########################################################################################################################           ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################################################################################################          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#############################################################################################################################         ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################################################################       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [################################################################################################################################      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################################################################     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###################################################################################################################################   ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [####################################################################################################################################  ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                                          1/2 
+  Cleanup    : 1:nfs-utils-1.3.0-0.66.el7.x86_64                                                                                                                                          2/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                                          1/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.66.el7.x86_64                                                                                                                                          2/2 
+
+Updated:
+  nfs-utils.x86_64 1:1.3.0-0.68.el7                                                                                                                                                           
+
+Complete!
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl enable rpcbind
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl enable nfs-server
+Created symlink from /etc/systemd/system/multi-user.target.wants/nfs-server.service to /usr/lib/systemd/system/nfs-server.service.
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl enable rpc-statd
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl enable nfs-idmapd
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl start rpcbind
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl start nfs-server
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl start rpc-statd
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl start nfs-idmapd
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# rpcinfo  
+   program version netid     address                service    owner
+    100000    4    tcp6      ::.0.111               portmapper superuser
+    100000    3    tcp6      ::.0.111               portmapper superuser
+    100000    4    udp6      ::.0.111               portmapper superuser
+    100000    3    udp6      ::.0.111               portmapper superuser
+    100000    4    tcp       0.0.0.0.0.111          portmapper superuser
+    100000    3    tcp       0.0.0.0.0.111          portmapper superuser
+    100000    2    tcp       0.0.0.0.0.111          portmapper superuser
+    100000    4    udp       0.0.0.0.0.111          portmapper superuser
+    100000    3    udp       0.0.0.0.0.111          portmapper superuser
+    100000    2    udp       0.0.0.0.0.111          portmapper superuser
+    100000    4    local     /var/run/rpcbind.sock  portmapper superuser
+    100000    3    local     /var/run/rpcbind.sock  portmapper superuser
+    100024    1    udp       0.0.0.0.153.78         status     29
+    100024    1    tcp       0.0.0.0.140.2          status     29
+    100024    1    udp6      ::.162.200             status     29
+    100024    1    tcp6      ::.143.252             status     29
+    100005    1    udp       0.0.0.0.78.80          mountd     superuser
+    100005    1    tcp       0.0.0.0.78.80          mountd     superuser
+    100005    1    udp6      ::.78.80               mountd     superuser
+    100005    1    tcp6      ::.78.80               mountd     superuser
+    100005    2    udp       0.0.0.0.78.80          mountd     superuser
+    100005    2    tcp       0.0.0.0.78.80          mountd     superuser
+    100005    2    udp6      ::.78.80               mountd     superuser
+    100005    2    tcp6      ::.78.80               mountd     superuser
+    100005    3    udp       0.0.0.0.78.80          mountd     superuser
+    100005    3    tcp       0.0.0.0.78.80          mountd     superuser
+    100005    3    udp6      ::.78.80               mountd     superuser
+    100005    3    tcp6      ::.78.80               mountd     superuser
+    100003    3    tcp       0.0.0.0.8.1            nfs        superuser
+    100003    4    tcp       0.0.0.0.8.1            nfs        superuser
+    100227    3    tcp       0.0.0.0.8.1            nfs_acl    superuser
+    100003    3    udp       0.0.0.0.8.1            nfs        superuser
+    100003    4    udp       0.0.0.0.8.1            nfs        superuser
+    100227    3    udp       0.0.0.0.8.1            nfs_acl    superuser
+    100003    3    tcp6      ::.8.1                 nfs        superuser
+    100003    4    tcp6      ::.8.1                 nfs        superuser
+    100227    3    tcp6      ::.8.1                 nfs_acl    superuser
+    100003    3    udp6      ::.8.1                 nfs        superuser
+    100003    4    udp6      ::.8.1                 nfs        superuser
+    100227    3    udp6      ::.8.1                 nfs_acl    superuser
+    100021    1    udp       0.0.0.0.170.175        nlockmgr   superuser
+    100021    3    udp       0.0.0.0.170.175        nlockmgr   superuser
+    100021    4    udp       0.0.0.0.170.175        nlockmgr   superuser
+    100021    1    tcp       0.0.0.0.139.106        nlockmgr   superuser
+    100021    3    tcp       0.0.0.0.139.106        nlockmgr   superuser
+    100021    4    tcp       0.0.0.0.139.106        nlockmgr   superuser
+    100021    1    udp6      ::.231.120             nlockmgr   superuser
+    100021    3    udp6      ::.231.120             nlockmgr   superuser
+    100021    4    udp6      ::.231.120             nlockmgr   superuser
+    100021    1    tcp6      ::.137.11              nlockmgr   superuser
+    100021    3    tcp6      ::.137.11              nlockmgr   superuser
+    100021    4    tcp6      ::.137.11              nlockmgr   superuser
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# mkdir -p /export/shared
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# chmod 0777 /export/shared
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# cat << EOF | sudo tee /etc/exports
+> /export/shared  192.168.10.0/24(rw,async)
+> EOF
+/export/shared  192.168.10.0/24(rw,async)
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# sudo exportfs -ra
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# cat /var/lib/nfs/etab
+/export/shared	192.168.10.0/24(rw,async,wdelay,hide,nocrossmnt,secure,root_squash,no_all_squash,no_subtree_check,secure_locks,acl,no_pnfs,anonuid=65534,anongid=65534,sec=sys,rw,secure,root_squash,no_all_squash)
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# ss -tunlp
+Netid  State      Recv-Q Send-Q                                               Local Address:Port                                                              Peer Address:Port              
+udp    UNCONN     0      0                                                                *:43695                                                                        *:*                  
+udp    UNCONN     0      0                                                        127.0.0.1:937                                                                          *:*                   users:(("rpc.statd",pid=3305,fd=5))
+udp    UNCONN     0      0                                                                *:966                                                                          *:*                   users:(("rpcbind",pid=377,fd=7))
+udp    UNCONN     0      0                                                                *:2049                                                                         *:*                  
+udp    UNCONN     0      0                                                                *:68                                                                           *:*                   users:(("dhclient",pid=2433,fd=6))
+udp    UNCONN     0      0                                                                *:111                                                                          *:*                   users:(("rpcbind",pid=377,fd=6))
+udp    UNCONN     0      0                                                        127.0.0.1:323                                                                          *:*                   users:(("chronyd",pid=397,fd=5))
+udp    UNCONN     0      0                                                                *:39246                                                                        *:*                   users:(("rpc.statd",pid=3305,fd=8))
+udp    UNCONN     0      0                                                                *:20048                                                                        *:*                   users:(("rpc.mountd",pid=3314,fd=7))
+udp    UNCONN     0      0                                                             [::]:41672                                                                     [::]:*                   users:(("rpc.statd",pid=3305,fd=10))
+udp    UNCONN     0      0                                                             [::]:59256                                                                     [::]:*                  
+udp    UNCONN     0      0                                                             [::]:966                                                                       [::]:*                   users:(("rpcbind",pid=377,fd=10))
+udp    UNCONN     0      0                                                             [::]:2049                                                                      [::]:*                  
+udp    UNCONN     0      0                                                             [::]:111                                                                       [::]:*                   users:(("rpcbind",pid=377,fd=9))
+udp    UNCONN     0      0                                                            [::1]:323                                                                       [::]:*                   users:(("chronyd",pid=397,fd=6))
+udp    UNCONN     0      0                                                             [::]:20048                                                                     [::]:*                   users:(("rpc.mountd",pid=3314,fd=9))
+tcp    LISTEN     0      128                                                              *:22                                                                           *:*                   users:(("sshd",pid=666,fd=3))
+tcp    LISTEN     0      100                                                      127.0.0.1:25                                                                           *:*                   users:(("master",pid=900,fd=13))
+tcp    LISTEN     0      64                                                               *:2049                                                                         *:*                  
+tcp    LISTEN     0      128                                                              *:35842                                                                        *:*                   users:(("rpc.statd",pid=3305,fd=9))
+tcp    LISTEN     0      64                                                               *:35690                                                                        *:*                  
+tcp    LISTEN     0      128                                                              *:111                                                                          *:*                   users:(("rpcbind",pid=377,fd=8))
+tcp    LISTEN     0      128                                                              *:20048                                                                        *:*                   users:(("rpc.mountd",pid=3314,fd=8))
+tcp    LISTEN     0      128                                                           [::]:22                                                                        [::]:*                   users:(("sshd",pid=666,fd=4))
+tcp    LISTEN     0      100                                                          [::1]:25                                                                        [::]:*                   users:(("master",pid=900,fd=14))
+tcp    LISTEN     0      128                                                           [::]:36860                                                                     [::]:*                   users:(("rpc.statd",pid=3305,fd=11))
+tcp    LISTEN     0      64                                                            [::]:2049                                                                      [::]:*                  
+tcp    LISTEN     0      64                                                            [::]:35083                                                                     [::]:*                  
+tcp    LISTEN     0      128                                                           [::]:111                                                                       [::]:*                   users:(("rpcbind",pid=377,fd=11))
+tcp    LISTEN     0      128                                                           [::]:20048                                                                     [::]:*                   users:(("rpc.mountd",pid=3314,fd=10))
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# rpcinfo -p
+   program vers proto   port  service
+    100000    4   tcp    111  portmapper
+    100000    3   tcp    111  portmapper
+    100000    2   tcp    111  portmapper
+    100000    4   udp    111  portmapper
+    100000    3   udp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  39246  status
+    100024    1   tcp  35842  status
+    100005    1   udp  20048  mountd
+    100005    1   tcp  20048  mountd
+    100005    2   udp  20048  mountd
+    100005    2   tcp  20048  mountd
+    100005    3   udp  20048  mountd
+    100005    3   tcp  20048  mountd
+    100003    3   tcp   2049  nfs
+    100003    4   tcp   2049  nfs
+    100227    3   tcp   2049  nfs_acl
+    100003    3   udp   2049  nfs
+    100003    4   udp   2049  nfs
+    100227    3   udp   2049  nfs_acl
+    100021    1   udp  43695  nlockmgr
+    100021    3   udp  43695  nlockmgr
+    100021    4   udp  43695  nlockmgr
+    100021    1   tcp  35690  nlockmgr
+    100021    3   tcp  35690  nlockmgr
+    100021    4   tcp  35690  nlockmgr
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --get-services
+[91mFirewallD is not running[00m
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --get-services[17Prpcinfo -p[1Pss -tunlpcat /var/lib/nfs/etab[4Psudo exportfs -racat << EOF | sudo tee /etc/exports
+/export/shared  192.168.10.0/24(rw,async)
+EOF
+[A[A[A[root@nfs-server vagrant]# c[9Phmod 0777 /export/shared
+[K
+[K
+[K[A[A[A[root@nfs-server vagrant]# chmod 0777 /export/shared[2Pmkdir -p /export/sharedrpcinfo[Ksystemctl start nfs-idmapd[1Prpc-statdnfs-server[3Prpcbind[4@enable nfs-idmapd          firewalld
+Created symlink from /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service to /usr/lib/systemd/system/firewalld.service.
+Created symlink from /etc/systemd/system/multi-user.target.wants/firewalld.service to /usr/lib/systemd/system/firewalld.service.
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl enable firewalld[1P[1P[1P[1P[1P[1P[1@s[1@t[1@a[1@r[1@t
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl start firewalld[1P[1P[1P[1@a[1@t[1@u[1@s
+[1;32m●[0m firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
+   Active: [1;32mactive (running)[0m since Fri 2020-11-27 15:51:53 UTC; 8s ago
+     Docs: man:firewalld(1)
+ Main PID: 3408 (firewalld)
+   CGroup: /system.slice/firewalld.service
+           └─3408 /usr/bin/python2 -Es /usr/sbin/firewalld --nofork --nopid
+
+Nov 27 15:51:53 nfs-server systemd[1]: Starting firewalld - dynamic firewall daemon...
+Nov 27 15:51:53 nfs-server systemd[1]: Started firewalld - dynamic firewall daemon.
+Nov 27 15:51:53 nfs-server firewalld[3408]: [1;39mWARNING: AllowZoneDrifting is enabled. This is considered an insecure configuration option. It will be removed in a future release....ling it now.[0m
+Hint: Some lines were ellipsized, use -l to show in full.
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# systemctl status firewalld[1Prt firewalld[1@enable firewalldfirewall-cmd --get-services[17Prpcinfo -pfirewall-cmd --get-services
+RH-Satellite-6 amanda-client amanda-k5-client amqp amqps apcupsd audit bacula bacula-client bgp bitcoin bitcoin-rpc bitcoin-testnet bitcoin-testnet-rpc ceph ceph-mon cfengine condor-collector ctdb dhcp dhcpv6 dhcpv6-client distcc dns docker-registry docker-swarm dropbox-lansync elasticsearch etcd-client etcd-server finger freeipa-ldap freeipa-ldaps freeipa-replication freeipa-trust ftp ganglia-client ganglia-master git gre high-availability http https imap imaps ipp ipp-client ipsec irc ircs iscsi-target isns jenkins kadmin kerberos kibana klogin kpasswd kprop kshell ldap ldaps libvirt libvirt-tls lightning-network llmnr managesieve matrix mdns minidlna mongodb mosh mountd mqtt mqtt-tls ms-wbt mssql murmur mysql nfs nfs3 nmea-0183 nrpe ntp nut openvpn ovirt-imageio ovirt-storageconsole ovirt-vmconsole plex pmcd pmproxy pmwebapi pmwebapis pop3 pop3s postgresql privoxy proxy-dhcp ptp pulseaudio puppetmaster quassel radius redis rpc-bind rsh rsyncd rtsp salt-master samba samba-client samba-dc sane sip sips slp smtp smtp-submission smtps snmp snmptrap spideroak-lansync squid ssh steam-streaming svdrp svn syncthing syncthing-gui synergy syslog syslog-tls telnet tftp tftp-client tinc tor-socks transmission-client upnp-client vdsm vnc-server wbem-http wbem-https wsman wsmans xdmcp xmpp-bosh xmpp-client xmpp-local xmpp-server zabbix-agent zabbix-server
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --get-services            state
+running
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --info-service mountd
+mountd
+  ports: 20048/tcp 20048/udp
+  protocols: 
+  source-ports: 
+  modules: 
+  destination: 
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --info-service nfs
+nfs
+  ports: 2049/tcp
+  protocols: 
+  source-ports: 
+  modules: 
+  destination: 
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --info-service nfs3
+nfs3
+  ports: 2049/tcp 2049/udp
+  protocols: 
+  source-ports: 
+  modules: 
+  destination: 
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --info-service rpc-bind
+rpc-bind
+  ports: 111/tcp 111/udp
+  protocols: 
+  source-ports: 
+  modules: 
+  destination: 
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --permanent --add-service=nfs3
+success
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --permanent --add-service=mountd
+success
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --permanent --add-service=rpc-bind
+success
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --reload
+success
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0 eth1
+  sources: 
+  services: dhcpv6-client mountd nfs3 rpc-bind ssh
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	
+]0;vagrant@nfs-server:/home/vagrant[root@nfs-server vagrant]# exit
+exit
+]0;vagrant@nfs-server:~[vagrant@nfs-server ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+]777;notify;Command completed;vagrant ssh nfs-server]0;ilya@linuxos000:~/Otus-nfs]7;file://linuxos000.corp.pri/home/ilya/Otus-nfs[ilya@linuxos000 Otus-nfs]$ exit
+exit
+
+Script done on 2020-11-27 19:07:29+03:00

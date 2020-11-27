@@ -1,0 +1,124 @@
+Script started on 2020-11-27 18:35:26+03:00
+]777;notify;Command completed;cls]0;ilya@linuxos000:~/03-lvm]7;file://linuxos000.corp.pri/home/ilya/03-lvm[ilya@linuxos000 03-lvm]$ vagrant ssh nfs-client
+[0;31mThe machine with the name 'nfs-client' was not found configured for
+this Vagrant environment.[0m
+]777;notify;Command completed;vagrant ssh nfs-client]0;ilya@linuxos000:~/03-lvm]7;file://linuxos000.corp.pri/home/ilya/03-lvm[ilya@linuxos000 03-lvm]$ cd /[K
+]777;notify;Command completed;cd ]0;ilya@linuxos000:~]7;file://linuxos000.corp.pri/home/ilya[ilya@linuxos000 ~]$ cd /[KOtus-nfs/
+]777;notify;Command completed;cd Otus-nfs/]0;ilya@linuxos000:~/Otus-nfs]7;file://linuxos000.corp.pri/home/ilya/Otus-nfs[ilya@linuxos000 Otus-nfs]$ cd Otus-nfs/[Kvagrant ssh nfs-client
+]0;vagrant@nfs-client:~[?1034h[vagrant@nfs-client ~]$ su
+Password: 
+]0;vagrant@nfs-client:/home/vagrant[?1034h[root@nfs-client vagrant]# um install -y nfs-utils
+bash: um: command not found
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# um install -y nfs-utils[1@y
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: mirrors.datahouse.ru
+ * extras: mirror.corbina.net
+ * updates: mirror.docker.ru
+base                                                                                                                                                                   | 3.6 kB  00:00:00     
+extras                                                                                                                                                                 | 2.9 kB  00:00:00     
+updates                                                                                                                                                                | 2.9 kB  00:00:00     
+(1/4): base/7/x86_64/group_gz                                                                                                                                          | 153 kB  00:00:00     
+(2/4): extras/7/x86_64/primary_db                                                                                                                                      | 222 kB  00:00:00     
+(3/4): updates/7/x86_64/primary_db                                                                                                                                     | 3.7 MB  00:00:00     
+(4/4): base/7/x86_64/primary_db                                                  74% [====================================================                  ]  0.0 B/s | 7.6 MB  --:--:-- ETA (4/4): base/7/x86_64/primary_db                                                                                                                                        | 6.1 MB  00:00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.66.el7 will be updated
+---> Package nfs-utils.x86_64 1:1.3.0-0.68.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==============================================================================================================================================================================================
+ Package                                       Arch                                       Version                                              Repository                                Size
+==============================================================================================================================================================================================
+Updating:
+ nfs-utils                                     x86_64                                     1:1.3.0-0.68.el7                                     base                                     412 k
+
+Transaction Summary
+==============================================================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 412 k
+Downloading packages:
+No Presto metadata available for base
+warning: /var/cache/yum/x86_64/7/base/packages/nfs-utils-1.3.0-0.68.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for nfs-utils-1.3.0-0.68.el7.x86_64.rpm is not installed
+nfs-utils-1.3.0-0.68.el7.x86_64.rpm                                                                                                                                    | 412 kB  00:00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [                                                                                                                                      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########                                                                                                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##############                                                                                                                        ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [######################                                                                                                                ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##########################                                                                                                            ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################                                                                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#####################################                                                                                                 ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [######################################                                                                                                ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################                                                                                          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##################################################                                                                                    ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#####################################################                                                                                 ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#########################################################                                                                             ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [##############################################################                                                                        ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################                                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [####################################################################                                                                  ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################                                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################                                                       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################                                                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################################                                              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [################################################################################################                                      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#######################################################################################################                               ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################################################################################                          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################################################                       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################################################                     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [########################################################################################################################              ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#########################################################################################################################             ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###########################################################################################################################           ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [############################################################################################################################          ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#############################################################################################################################         ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###############################################################################################################################       ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [################################################################################################################################      ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [#################################################################################################################################     ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [###################################################################################################################################   ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64 [####################################################################################################################################  ] 1/2  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                                          1/2 
+  Cleanup    : 1:nfs-utils-1.3.0-0.66.el7.x86_64                                                                                                                                          2/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                                          1/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.66.el7.x86_64                                                                                                                                          2/2 
+
+Updated:
+  nfs-utils.x86_64 1:1.3.0-0.68.el7                                                                                                                                                           
+
+Complete!
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# yum install -y nfs-utils                        sudo mount 192.168.10.10:/export/shared /mnt
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# mount | grep nfs
+sunrpc on /var/lib/[01;31m[Knfs[m[K/rpc_pipefs type rpc_pipefs (rw,relatime)
+192.168.10.10:/export/shared on /mnt type [01;31m[Knfs[m[K4 (rw,relatime,vers=4.1,rsize=262144,wsize=262144,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=192.168.10.11,local_lock=none,addr=192.168.10.10)
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# sudo umount /mnt[1P[1P[1P[1P[1P
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# sudo mount.nfs -vv 192.168.10.10:/export/shared /mnt -o nfsvers=3,proto=udp,soft
+mount.nfs: timeout set for Fri Nov 27 16:01:55 2020
+mount.nfs: trying text-based options 'nfsvers=3,proto=udp,soft,addr=192.168.10.10'
+mount.nfs: prog 100003, trying vers=3, prot=17
+mount.nfs: trying 192.168.10.10 prog 100003 vers 3 prot UDP port 2049
+mount.nfs: prog 100005, trying vers=3, prot=17
+mount.nfs: trying 192.168.10.10 prog 100005 vers 3 prot UDP port 20048
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# dd if=/dev/zero of=/mnt/test1G.zero bs=1M count=1024
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.1 GB) copied, 12.9017 s, 83.2 MB/s
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# sync
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# ls -l /mnt
+total 1176132
+-rw-r--r--. 1 nfsnobody nfsnobody 1073741824 Nov 27 16:01 test1G.zero
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# rm /mnt/test1G.zero
+rm: remove regular file '/mnt/test1G.zero'? 
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# systemctl enable firewalld
+Created symlink from /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service to /usr/lib/systemd/system/firewalld.service.
+Created symlink from /etc/systemd/system/multi-user.target.wants/firewalld.service to /usr/lib/systemd/system/firewalld.service.
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# systemctl start firewalld
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# umount /mnt
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# mount.nfs -vv 192.168.10.10:/export/shared /mnt -o nfsvers=3,proto=udp,soft
+mount.nfs: timeout set for Fri Nov 27 16:05:42 2020
+mount.nfs: trying text-based options 'nfsvers=3,proto=udp,soft,addr=192.168.10.10'
+mount.nfs: prog 100003, trying vers=3, prot=17
+mount.nfs: trying 192.168.10.10 prog 100003 vers 3 prot UDP port 2049
+mount.nfs: prog 100005, trying vers=3, prot=17
+mount.nfs: trying 192.168.10.10 prog 100005 vers 3 prot UDP port 20048
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# test -f /mnt/test1G.zero && rm -f /mnt/test1G.zero
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# dd if=/dev/zero of=/mnt/test1G.zero bs=1M count=1024
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.1 GB) copied, 13.6177 s, 78.8 MB/s
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# sync
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# ls -l /mnt
+total 1048580
+-rw-r--r--. 1 nfsnobody nfsnobody 1073741824 Nov 27 16:04 test1G.zero
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# dd if=/mnt/test1G.zero of=/dev/null
+2097152+0 records in
+2097152+0 records out
+1073741824 bytes (1.1 GB) copied, 2.65379 s, 405 MB/s
+]0;vagrant@nfs-client:/home/vagrant[root@nfs-client vagrant]# exit
+exit
+]0;vagrant@nfs-client:~[vagrant@nfs-client ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+]777;notify;Command completed;vagrant ssh nfs-client]0;ilya@linuxos000:~/Otus-nfs]7;file://linuxos000.corp.pri/home/ilya/Otus-nfs[ilya@linuxos000 Otus-nfs]$ exit
+exit
+
+Script done on 2020-11-27 19:07:12+03:00
