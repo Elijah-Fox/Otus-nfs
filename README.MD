@@ -3,20 +3,20 @@
 * Результаты выполненных действий 
 
 * Server
-![результат server](https://github.com/Elijah-Fox/Otus-nfs/blob/master/images/server.png)
+![результат server](https://github.com/Elijah-Fox/otus-nfs/blob/main/images/server.png)
 
 
 * Client
-![результат server](https://github.com/Elijah-Fox/Otus-nfs/blob/master/images/client.png)
+![результат server](https://github.com/Elijah-Fox/otus-nfs/blob/main/images/client.png)
 
 
 # Лог действий /log
 
 SERVER
-https://github.com/Elijah-Fox/Otus-nfs/blob/master/log/server.log
+https://github.com/Elijah-Fox/otus-nfs/blob/main/log/server.log
 
 CLIENT
-https://github.com/Elijah-Fox/Otus-nfs/blob/master/log/client.log
+https://github.com/Elijah-Fox/otus-nfs/blob/main/log/client.log
 
 * для автоматического монтирования добавил строчку в /etc/fstab
 
